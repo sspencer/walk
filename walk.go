@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"path"
 	"path/filepath"
 	"strings"
 )
@@ -44,7 +45,7 @@ func main() {
 
 	p := patternWalker{pats: args[1:], matchSuffix: *matchSuffix}
 
-	if err := filepath.Walk(args[0], p.Walker); err != nil {
+	if err := filepath.Walk(path.Clean(args[0]), p.Walker); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
