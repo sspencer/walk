@@ -1,5 +1,13 @@
 # Walk
-A simplified `find` command that recursively walks a directory and finds files that match the given patterns.  All files that begin with "." are ignored.
+A simplified `find` command that recursively walks a directory and finds files that match the given patterns.  All files that begin with "." are ignored.  Walk is written in **Go**, is (currently) under 100 lines and code and should easily compile on all platforms that support Go.
+
+## Install
+
+1. checkout the code
+2. cd walk
+3. go install
+
+If go/bin is in your PATH, simply type `walk`.
 
 ## Command line help:
 
