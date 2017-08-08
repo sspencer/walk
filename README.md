@@ -19,6 +19,8 @@ Usage:
   walk <directory> [pat1 pat2 ...]
 
 Flags:
+  -s directory
+    	skip this directory (comma separated to multiple flags)
   -x	treat patterns as file extensions
 ```
 
@@ -36,3 +38,6 @@ Find all files in another directory
 
     walk ~/Sites/img
 
+Find all local Go files, skipping the vendor and doc directories
+
+    walk -x -s vendor -s doc . go
