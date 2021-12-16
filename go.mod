@@ -1,3 +1,3 @@
-module github.com/sspencer/walk
+module walk
 
 go 1.17
